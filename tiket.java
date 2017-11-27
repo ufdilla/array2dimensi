@@ -3,47 +3,34 @@
  */
 public class tiket {
     public static void main(String[] args) {
-         String[][] data = 
+    
+        int data[][] = 
         {
-            {"Medan", "Jakarta", "800,000"},
-            {"Medan", "Semarang", "1,100,000"},
-            {"Medan", "Denpasar", "1,300,000"},
-            {"Jakarta", "Semarang", "500,000"},
-            {"Jakarta", "Denpasar", "700,000"},
-            {"Semarang", "Denpasar", "500,000"},
-            
-            {"Jakarta", "Semarang", "400,000"},
-            {"Jakarta", "Denpasar", "600,000"},
-            {"Medan", "Jakarta", "800,000"},
-            {"Medan", "Semarang", "1,000,000"},
-            {"Medan", "Denpasar", "1,200,000"},
-            {"Semarang", "Denpasar", "400,000"}
+            {0, 800, 1100, 1300}, {800, 0, 500, 700}, {1000, 400, 0, 500}, {1200, 600, 400, 0}
         };
-        
-        for (int a = 0; a <= data.length; a++)
-        {
-            try 
+      
+        try 
             {
-                if(a < (data.length/2))
-                {
-                System.out.println("Lokasi Berangkat : " + data[a][0]);
-                System.out.println("Lokasi Tujuan : " + data[a][1]);
-                System.out.println("Harga Tiket : " + data[a][2]);
-                System.out.println("=========================================");
-                }
-                
-                else if(a >= (data.length/2))
-                {
-                System.out.println("Lokasi Berangkat : " + data[a][1]);
-                System.out.println("Lokasi Tujuan : " + data[a][0]);
-                System.out.println("Harga Tiket : " + data[a][2]);
-                System.out.println("=========================================");
-                }
+                System.out.println("Medan To Medan : " + data[0][0]);
+                System.out.println("Medan To Jakarta : " + data[0][1] );
+                System.out.println("Medan To Semarang : " + data[0][2]);
+                System.out.println("Medan To Denpasar : " + data[0][3]);
+                System.err.println("Jakarta To Medan : " + data[1][0]);
+                System.out.println("Jakarta To Jakarta : " + data[1][1]);
+                System.out.println("Jakarta To Semarang : " + data[1][2]);
+                System.out.println("Jakarta To Denpasar : " + data[1][3]);
+                System.out.println("Semarang To Medan : " + data[2][0]);
+                System.out.println("Semarang To Jakarta : " + data[2][1]);
+                System.out.println("Semarang To Semarang : " + data[2][2]);
+                System.out.println("Semarang To Denpasar : " + data[2][3]);
+                System.out.println("Denpasar To Medan : " + data[3][0]);
+                System.out.println("Denpasar To Jakarta : " + data[3][1]);
+                System.out.println("Denpasar To Semarang : " + data[3][2]);
+                System.out.println("Denpasar To Denpasar : " + data[3][3]);
             }
             catch (Exception err)
             {
                 System.out.println( "Error.");
             }
-        }
     }
 }
