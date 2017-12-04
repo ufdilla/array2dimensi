@@ -17,11 +17,10 @@ public class tiket3
             level1:
             for (int j = 0; j < data[0].length; j++) 
             {
-                if (i == j)
+                if (data[i][j] == 0)
                 continue level1;
                 
-                
-                else if (data[i][j] == 0)
+                else if (i == j)
                 continue level2;
 
                 else
